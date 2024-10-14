@@ -64,8 +64,6 @@
             text-decoration: underline;
             color: #0021fa;
         }
-        
-       
         body.dark-mode {
             background-color: #333;
             color: white; 
@@ -86,6 +84,16 @@
         a.dark-mode:hover {
             color: #4a99cc; 
         }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            h4, h5 {
+                font-size: 18px; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -93,12 +101,12 @@
         <h1>Jason Novak</h1>
         <p>Email: <a href="mailto:jasonnovak@lewisu.edu">jasonnovak@lewisu.edu</a></p>
         <p>Discord: jasonnovaklu_69213</p>
-        <img src="images/me.png" alt="me picture" width="150">
+        <img src="images/me.png" alt="Photo of Jason Novak" width="150" loading="lazy">
     </header>
 
     <section>
         <h2><b>Introduction</b></h2>
-        <h3>Hi, my name is Jason, I'm 18, and I am a first year at Lewis University. I live in Romeoville with both of my parents, and I am an only child. My major is computer science, and I don't have a minor yet.</h3>
+        <h3>Hi, my name is Jason, I'm 18, and I am a first-year at Lewis University. I live in Romeoville with both of my parents, and I am an only child. My major is computer science, and I don't have a minor yet.</h3>
         <h4><b>What I Hope to Learn in this Course</b></h4>
         <ul>
             <li>Learning how to create websites</li>
@@ -106,14 +114,14 @@
         </ul>
         <h5><b>My Favorite Hobby / Activity</b></h5>
         <ul>
-            <li>Piano, a song I can play: <a href="https://www.youtube.com/watch?v=BV7RkEL6oRc" target="_blank"> song</a></li>
-            <li>Chess, you can add me on chess.com here: <a href="https://www.chess.com/member/bigdawgbignutz" target="_blank"> my-chess.com</a></li>
+            <li>Piano, a song I can play: <a href="https://www.youtube.com/watch?v=BV7RkEL6oRc" target="_blank" rel="noopener noreferrer"> song</a></li>
+            <li>Chess, you can add me on chess.com here: <a href="https://www.chess.com/member/bigdawgbignutz" target="_blank" rel="noopener noreferrer"> my-chess.com</a></li>
         </ul>
         <h5><b>Fun Fact</b></h5>
         <h6>I can solve a Rubik's cube in like a minute</h6>
         <div style="text-align: center;"> 
-        <button id="theme-toggle">Dark Mode</button>
-    </div>
+            <button id="theme-toggle" aria-label="Toggle dark mode">Dark Mode</button>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Jason Novak | <a href="mailto:jasonnovak@lewisu.edu">Contact me</a></p>
