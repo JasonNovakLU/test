@@ -10,7 +10,7 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+            transition: background-color 0.5s, color 0.5s;
         }
         header {
             text-align: center;
@@ -54,37 +54,37 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-            transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+            transition: background-color 0.5s, color 0.5s;
         }
         a {
-            color: #007bff; /* Link color */
-            text-decoration: none; /* Remove underline */
+            color: #0099ff;
+            text-decoration: none; 
         }
         a:hover {
-            text-decoration: underline; /* Underline on hover */
-            color: #0056b3; /* Darker shade on hover */
+            text-decoration: underline;
+            color: #0021fa;
         }
         
-        /* Dark theme styles */
+       
         body.dark-mode {
-            background-color: #333; /* Dark background */
-            color: white; /* Light text */
+            background-color: #333;
+            color: white; 
         }
         header.dark-mode {
-            color: lightgray; /* Header text color */
+            color: lightgray; 
         }
         h2.dark-mode, h3.dark-mode, h4.dark-mode, h5.dark-mode, h6.dark-mode {
-            color: white; /* Adjust heading colors */
+            color: white; 
         }
         footer.dark-mode {
-            background-color: #222; /* Dark footer background */
-            color: white; /* Light text in footer */
+            background-color: #222; 
+            color: white;
         }
         a.dark-mode {
-            color: #66aaff; /* Link color in dark mode */
+            color: #66aaff; 
         }
         a.dark-mode:hover {
-            color: #4a99cc; /* Darker shade on hover in dark mode */
+            color: #4a99cc; 
         }
     </style>
 </head>
@@ -94,7 +94,7 @@
         <p>Email: <a href="mailto:jasonnovak@lewisu.edu">jasonnovak@lewisu.edu</a></p>
         <p>Discord: jasonnovaklu_69213</p>
         <img src="images/me.png" alt="me picture" width="150">
-        <button id="theme-toggle">Toggle Theme</button> <!-- Theme toggle button -->
+        <button id="theme-toggle">Dark Mode</button> 
     </header>
 
     <section>
@@ -118,14 +118,12 @@
     </footer>
 
     <script>
-        // JavaScript for theme toggle
         const toggleButton = document.getElementById('theme-toggle');
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
             const elementsToToggle = [document.querySelector('header'), document.querySelector('footer'), ...document.querySelectorAll('h2, h3, h4, h5, h6')];
             elementsToToggle.forEach(element => {
                 element.classList.toggle('dark-mode');
-                // Toggle link styles in dark mode
                 element.querySelectorAll('a').forEach(link => {
                     link.classList.toggle('dark-mode');
                 });
