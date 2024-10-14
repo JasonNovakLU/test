@@ -1,118 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Jason's GTKEO</title>
-	<style>
-    	body {
-        	font-family: Arial, sans-serif;
-        	background-color: #f0f0f0;
-        	margin: 0;
-        	padding: 0;
-    	}
-    	header {
-        	text-align: center;
-        	background-color: #000000;
-        	color: grey;
-        	padding: 20px 0;
-    	}
-    	header img {
-        	border-radius: 25%;
-        	margin-top: 20px;
-    	}
-    	
-	h2 {
-        	color: black;
-        	text-align: center;
-        	font-weight: normal; 
-	}	
-	h3 {
-		color: black;
-		text-align: center;
-		font-size: 15px;
-		font-weight: normal;
-	}
-	h4 {
-		color: black;
-		text-align: center;
-		font-size: 22px;
-		font-weight: normal;
-	}
-	h5 {
-		color: black;
-		text-align: center;
-		font-size: 22px;
-		font-weight: normal; 
-	}
-	h6 {
-		color: black;
-		text-align: center;
-		font-size: 15px;
-		font-weight: normal;
-	}
-    	ul {
-        	 list-style-position: inside;
-        	 text-align: center;
-        	 padding-left: 0;
-        	 margin: 0 auto;
-        	 width: fit-content;     
-    	}
-	li {
-        margin-bottom: 10px;
-    }
-	section {
-		padding-bottom: 100px;
-	}
-	footer {
-    text-align: center;
-    padding: 20px;
-    background-color: black; 
-    color: white; 
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-		a {
-		color: #007bff; /* Link color */
-		text-decoration: none; /* Remove underline */
-	}
-
-	a:hover {
-		text-decoration: underline; /* Underline on hover */
-		color: #0056b3; /* Darker shade on hover */
-	}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason's GTKEO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+        }
+        header {
+            text-align: center;
+            background-color: #000000;
+            color: grey;
+            padding: 20px 0;
+        }
+        header img {
+            border-radius: 25%;
+            margin-top: 20px;
+        }
+        h2, h3, h4, h5, h6 {
+            color: black;
+            text-align: center;
+            font-weight: normal;
+        }
+        h3, h6 {
+            font-size: 15px;
+        }
+        h4, h5 {
+            font-size: 22px;
+        }
+        ul {
+            list-style-position: inside;
+            text-align: center;
+            padding-left: 0;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        section {
+            padding-bottom: 100px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+        }
+        a {
+            color: #007bff; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #0056b3; /* Darker shade on hover */
+        }
+        
+        /* Dark theme styles */
+        body.dark-mode {
+            background-color: #333; /* Dark background */
+            color: white; /* Light text */
+        }
+        header.dark-mode {
+            color: lightgray; /* Header text color */
+        }
+        h2.dark-mode, h3.dark-mode, h4.dark-mode, h5.dark-mode, h6.dark-mode {
+            color: white; /* Adjust heading colors */
+        }
+        footer.dark-mode {
+            background-color: #222; /* Dark footer background */
+            color: white; /* Light text in footer */
+        }
+        a.dark-mode {
+            color: #66aaff; /* Link color in dark mode */
+        }
+        a.dark-mode:hover {
+            color: #4a99cc; /* Darker shade on hover in dark mode */
+        }
+    </style>
 </head>
 <body>
-	<header>
-    	<h1>Jason Novak</h1>
-    	<p>Email: <a href="mailto:jasonnovak@lewisu.edu">jasonnovak@lewisu.edu</a></p>
-    	<p>Discord: jasonnovaklu_69213</p>
-    	<img src="images/me.png" alt="me picture" width="150">
-	</header>
+    <header>
+        <h1>Jason Novak</h1>
+        <p>Email: <a href="mailto:jasonnovak@lewisu.edu">jasonnovak@lewisu.edu</a></p>
+        <p>Discord: jasonnovaklu_69213</p>
+        <img src="images/me.png" alt="me picture" width="150">
+        <button id="theme-toggle">Toggle Theme</button> <!-- Theme toggle button -->
+    </header>
 
-	<section> 
-	<h2><b>Introduction</b></h2>
-	<h3>Hi, my name is Jason, im 18, and I am a first year at Lewis University. I live in Romeoville with both of my parents, and I am an only child. My major is computer science, and I don't have a minor yet.</h3>
-	<h4><b>What I Hope to Learn in this Course</b></h4>
-		<ul>
-			<li>Learning how to create websites</li>
-			<li>Gaining a basic understanding of programming</li>	
-		</ul>
-	<h5><b>My Favorite Hobby / Activity</b></h5>
-		<ul>
-			<li>Piano, a song i can play: <a href="https://www.youtube.com/watch?v=BV7RkEL6oRc" target="_blank"> song</a></li>
-			<li>Chess, you can add me on chess.com here: <a href="https://www.chess.com/member/bigdawgbignutz" target="_blank"> my-chess.com</a></li>	
-		</ul>
-	<h5><b>Fun Fact</b></h5>
-	<h6>i can solve a rubix cube in like a minute
-	
-	
-	</h6>
-	</section>
-	<footer>
-    	<p>&copy; 2024 Jason Novak | <a href="mailto:jasonnovak@lewisu.edu">Contact me</a></p>
-	</footer>
+    <section>
+        <h2><b>Introduction</b></h2>
+        <h3>Hi, my name is Jason, I'm 18, and I am a first year at Lewis University. I live in Romeoville with both of my parents, and I am an only child. My major is computer science, and I don't have a minor yet.</h3>
+        <h4><b>What I Hope to Learn in this Course</b></h4>
+        <ul>
+            <li>Learning how to create websites</li>
+            <li>Gaining a basic understanding of programming</li>
+        </ul>
+        <h5><b>My Favorite Hobby / Activity</b></h5>
+        <ul>
+            <li>Piano, a song I can play: <a href="https://www.youtube.com/watch?v=BV7RkEL6oRc" target="_blank"> song</a></li>
+            <li>Chess, you can add me on chess.com here: <a href="https://www.chess.com/member/bigdawgbignutz" target="_blank"> my-chess.com</a></li>
+        </ul>
+        <h5><b>Fun Fact</b></h5>
+        <h6>I can solve a Rubik's cube in like a minute</h6>
+    </section>
+    <footer>
+        <p>&copy; 2024 Jason Novak | <a href="mailto:jasonnovak@lewisu.edu">Contact me</a></p>
+    </footer>
+
+    <script>
+        // JavaScript for theme toggle
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const elementsToToggle = [document.querySelector('header'), document.querySelector('footer'), ...document.querySelectorAll('h2, h3, h4, h5, h6')];
+            elementsToToggle.forEach(element => {
+                element.classList.toggle('dark-mode');
+                // Toggle link styles in dark mode
+                element.querySelectorAll('a').forEach(link => {
+                    link.classList.toggle('dark-mode');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
