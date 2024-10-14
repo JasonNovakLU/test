@@ -44,11 +44,16 @@
 		font-size: 15px;
 	}
     	ul {
-        	list-style-type: circle;
-        	text-align: center;
+        	 list-style-position: inside;  /* Ensures bullets are inside and aligned with text */
+            text-align: center;           /* Centers the text and bullets */
+            padding-left: 0;              /* Removes default left padding */
+            margin: 0 auto;               /* Centers the entire list block */
+            width: fit-content;     
 		
-		list-style-position: inside; 
     	}
+		 li {
+            margin-bottom: 10px;          /* Adds spacing between the bullet points */
+        }
 	</style>
 </head>
 <body>
