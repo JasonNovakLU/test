@@ -94,6 +94,16 @@
                 font-size: 18px; 
             }
         }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button.clicked {
+            transform: scale(1.1);
+        }
+        
     </style>
 </head>
 <body>
@@ -123,13 +133,21 @@
             <button id="theme-toggle" aria-label="Toggle dark mode">Dark Mode</button>
         </div>
     </section>
+    
     <footer>
         <p>&copy; 2024 Jason Novak | <a href="mailto:jasonnovak@lewisu.edu">Contact me</a></p>
     </footer>
 
     <script>
         const toggleButton = document.getElementById('theme-toggle');
+
         toggleButton.addEventListener('click', () => {
+            toggleButton.classList.add('clicked');
+
+            setTimeout(() => {
+                toggleButton.classList.remove('clicked');
+            }, 300);
+
             document.body.classList.toggle('dark-mode');
             const elementsToToggle = [document.querySelector('header'), document.querySelector('footer'), ...document.querySelectorAll('h2, h3, h4, h5, h6')];
             elementsToToggle.forEach(element => {
